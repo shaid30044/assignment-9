@@ -12,11 +12,12 @@ const slider4 = "url(https://i.ibb.co/nbnPX6f/image-5.png)";
 const Carousel = () => {
   return (
     <div className="relative">
-      <div className="">
+      <div className="absolute z-10 w-full">
         <Navbar />
       </div>
       <div className="carousel w-full relative">
         {/* slide 1 */}
+
         <div id="slide1" className="carousel-item relative w-full">
           <div
             style={{
@@ -24,8 +25,7 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            {/* Black overlay */}
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-30"></div>
             <div className="absolute">
               <h1 className="text-4xl text-white"></h1>
             </div>
@@ -47,6 +47,7 @@ const Carousel = () => {
         </div>
 
         {/* slide 2 */}
+
         <div id="slide2" className="carousel-item relative w-full">
           <div
             style={{
@@ -54,7 +55,6 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            {/* Black overlay */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
@@ -74,6 +74,7 @@ const Carousel = () => {
         </div>
 
         {/* slide 3 */}
+
         <div id="slide3" className="carousel-item relative w-full">
           <div
             style={{
@@ -81,7 +82,6 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            {/* Black overlay */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
@@ -101,6 +101,7 @@ const Carousel = () => {
         </div>
 
         {/* slide 4 */}
+
         <div id="slide4" className="carousel-item relative w-full">
           <div
             style={{
@@ -108,7 +109,6 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            {/* Black overlay */}
             <div className="absolute inset-0 bg-black opacity-50"></div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
