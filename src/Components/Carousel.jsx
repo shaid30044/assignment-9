@@ -3,7 +3,7 @@ import {
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
 
-const slider1 = "url(https://i.ibb.co/GMVbSyL/image-3.png)";
+const slider1 = "url(https://i.ibb.co/p4HY19t/image-2-1.png)";
 const slider2 = "url(https://i.ibb.co/b7Vpvb2/image-4.png)";
 const slider3 = "url(https://i.ibb.co/47Chm6L/image-6.png)";
 const slider4 = "url(https://i.ibb.co/nbnPX6f/image-5.png)";
@@ -24,9 +24,15 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            <div className="absolute inset-0 bg-black opacity-30"></div>
-            <div className="absolute">
-              <h1 className="text-4xl text-white"></h1>
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color1">
+                Where Every Game
+                <br />
+                Becomes
+                <br />
+                an Epic Event!
+              </h1>
             </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
@@ -55,6 +61,15 @@ const Carousel = () => {
             className="w-full bg-no-repeat bg-contain relative"
           >
             <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color2">
+                Connecting the
+                <br />
+                Future: Tech Expos
+                <br />
+                that Inspire!
+              </h1>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide1"
@@ -81,7 +96,14 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color1">
+                Code, Collaborate, Create: Hack
+                <br />
+                the Possibilities!
+              </h1>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide2"
@@ -108,7 +130,16 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color2">
+                Level Up Your
+                <br />
+                Experience: Gaming
+                <br />
+                Conventions Reloaded!
+              </h1>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide3"
@@ -135,7 +166,18 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color1">
+                Elevate Your Tech
+                <br />
+                IQ: Unleash
+                <br />
+                Your Potential with
+                <br />
+                Bootcamps!
+              </h1>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide4"
@@ -162,7 +204,15 @@ const Carousel = () => {
             }}
             className="w-full bg-no-repeat bg-contain relative"
           >
-            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute inset-0 bg-black opacity-60"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color2">
+                Unlocking
+                <br />
+                the Future: Robotics
+                <br />& AI in Action!
+              </h1>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide5"
@@ -190,6 +240,13 @@ const Carousel = () => {
             className="w-full bg-no-repeat bg-contain relative"
           >
             <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute text-center -translate-y-1/2 -translate-x-1/2 left-1/2 top-1/2">
+              <h1 className="text-xl md:text-4xl lg:text-7xl font-bold lg:leading-[100px] text-color1">
+                Tech Networking: Building
+                <br />
+                Tomorrow Together!
+              </h1>
+            </div>
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide6"
