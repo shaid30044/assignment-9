@@ -49,7 +49,7 @@ const Service = ({ service }) => {
             <p className="text-dark4">{rating}</p>
           </div>
           <Link>
-            <button className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color1 hover:text-dark2 text-[16px] text-white px-6">
+            <button className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-[16px] text-white px-6">
               View Details
             </button>
           </Link>

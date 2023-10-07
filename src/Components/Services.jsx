@@ -1,18 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import Service from "./Service";
 import { useState } from "react";
-import { BiSearch } from "react-icons/bi";
-import { LuSearchX } from "react-icons/lu";
 
 const Services = () => {
   const services = useLoaderData();
 
-  const [searchOpen, setSearchOpen] = useState(false);
   const [showMore, setShowMore] = useState(6);
-
-  const toggleSearch = () => {
-    setSearchOpen(!searchOpen);
-  };
 
   const handleShowMore = () => {
     setShowMore(showMore + 6);
@@ -30,7 +23,7 @@ const Services = () => {
           placeholder="Search your Category here..."
           className="rounded-l-full bg-dark6 text-sm md:text-base text-dark2 focus:outline-none w-60 md:w-[400px] px-4 py-2 md:px-6"
         />
-        <button className="bg-color1 hover:bg-color1 hover:text-dark2 md:text-lg md:font-medium text-white rounded-r-full focus:outline-none px-2.5 md:px-3 lg:px-4 py-2">
+        <button className="bg-color1 hover:bg-color2 md:text-lg md:font-medium text-white rounded-r-full focus:outline-none px-2.5 md:px-3 lg:px-4 py-2">
           Search
         </button>
       </div>
@@ -42,7 +35,7 @@ const Services = () => {
       {showMore < services.length && (
         <button
           onClick={handleShowMore}
-          className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color1 hover:text-dark2 text-lg text-white px-6 mt-10 m-auto"
+          className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-lg text-white px-6 mt-10 m-auto"
         >
           Show More
         </button>

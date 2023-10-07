@@ -95,7 +95,7 @@ const Navbar = () => {
         </ul>
       </div>
       <Link>
-        <button className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white hover:text-dark2 bg-color1 hover:bg-color1">
+        <button className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2">
           Login{" "}
           <span className="text-xl lg:text-2xl">
             <BiLogInCircle />
