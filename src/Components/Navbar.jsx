@@ -100,22 +100,9 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div>
-        <div className="hidden md:flex items-center">
-          <input
-            type="search"
-            name="search"
-            placeholder="Search your Category here..."
-            className="rounded-l-full backdrop-blur-md bg-white/20 text-white focus:outline-none w-[260px] lg:w-96 pl-5 lg:px-6 py-1.5 lg:py-2"
-          />
-          <button className="text-2xl text-white bg-color1 hover:bg-color1 rounded-r-full focus:outline-none px-3 lg:px-4 py-1.5 lg:py-2">
-            <BiSearch />
-          </button>
-        </div>
-      </div>
-      <div className="flex gap-3">
+      <div className="flex gap-3 md:gap-6">
         <div className="text-xl text-white">
-          <div className="md:hidden">
+          <div className="">
             {searchOpen ? (
               <div className="flex items-center gap-2">
                 <div className="flex items-center">
@@ -123,15 +110,15 @@ const Navbar = () => {
                     type="search"
                     name="search"
                     placeholder="Search your Category here..."
-                    className="rounded-l-full backdrop-blur-md bg-white/20 text-white text-sm font-light focus:outline-none w-60 px-4 py-1"
+                    className="rounded-l-full backdrop-blur-md bg-white/20 text-white text-sm md:text-base font-light focus:outline-none w-60 md:w-[260px] lg:w-96 px-4 py-1 md:pl-5 lg:px-6 md:py-1.5 lg:py-2"
                   />
-                  <button className="text-xl text-white bg-color1 hover:bg-color1 rounded-r-full focus:outline-none px-2.5 py-1">
+                  <button className="text-xl md:text-2xl text-white bg-color1 hover:bg-color1 rounded-r-full focus:outline-none px-2.5 md:px-3 lg:px-4 py-1 md:py-1.5 lg:py-2">
                     <BiSearch />
                   </button>
                 </div>
                 <button
                   onClick={toggleSearch}
-                  className="md:hidden btn btn-ghost text-xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0"
+                  className="btn btn-ghost text-xl md:text-2xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0"
                 >
                   <LuSearchX />
                 </button>
@@ -139,7 +126,7 @@ const Navbar = () => {
             ) : (
               <button
                 onClick={toggleSearch}
-                className="md:hidden btn btn-ghost text-xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0"
+                className=" btn btn-ghost text-xl md:text-2xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0"
               >
                 <BiSearch />
               </button>
