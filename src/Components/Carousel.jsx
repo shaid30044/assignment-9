@@ -2,19 +2,18 @@ import {
   MdOutlineArrowBackIos,
   MdOutlineArrowForwardIos,
 } from "react-icons/md";
-import Navbar from "./Navbar";
 
 const slider1 = "url(https://i.ibb.co/GMVbSyL/image-3.png)";
 const slider2 = "url(https://i.ibb.co/b7Vpvb2/image-4.png)";
 const slider3 = "url(https://i.ibb.co/47Chm6L/image-6.png)";
 const slider4 = "url(https://i.ibb.co/nbnPX6f/image-5.png)";
+const slider5 = "url(https://i.ibb.co/25nTsHx/image-7.png";
+const slider6 = "url(https://i.ibb.co/MsykV0t/image-8.png";
+const slider7 = "url(https://i.ibb.co/7S2Zssq/image-9.png";
 
 const Carousel = () => {
   return (
-    <div className="relative">
-      <div className="absolute z-10 w-full">
-        <Navbar />
-      </div>
+    <div>
       <div className="carousel w-full relative">
         {/* slide 1 */}
 
@@ -113,6 +112,87 @@ const Carousel = () => {
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
               <a
                 href="#slide3"
+                className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
+              >
+                <MdOutlineArrowBackIos className="text-white text-xl" />
+              </a>
+              <a
+                href="#slide5"
+                className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
+              >
+                <MdOutlineArrowForwardIos className="text-white text-xl" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* slide 5 */}
+
+        <div id="slide5" className="carousel-item relative w-full">
+          <div
+            style={{
+              backgroundImage: slider5,
+            }}
+            className="w-full bg-no-repeat bg-contain relative"
+          >
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a
+                href="#slide4"
+                className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
+              >
+                <MdOutlineArrowBackIos className="text-white text-xl" />
+              </a>
+              <a
+                href="#slide6"
+                className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
+              >
+                <MdOutlineArrowForwardIos className="text-white text-xl" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* slide 6 */}
+
+        <div id="slide6" className="carousel-item relative w-full">
+          <div
+            style={{
+              backgroundImage: slider6,
+            }}
+            className="w-full bg-no-repeat bg-contain relative"
+          >
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a
+                href="#slide5"
+                className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
+              >
+                <MdOutlineArrowBackIos className="text-white text-xl" />
+              </a>
+              <a
+                href="#slide7"
+                className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
+              >
+                <MdOutlineArrowForwardIos className="text-white text-xl" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* slide 7 */}
+
+        <div id="slide7" className="carousel-item relative w-full">
+          <div
+            style={{
+              backgroundImage: slider7,
+            }}
+            className="w-full bg-no-repeat bg-contain relative"
+          >
+            <div className="absolute inset-0 bg-black opacity-50"></div>
+            <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a
+                href="#slide6"
                 className="btn btn-circle border-2 border-transparent backdrop-blur-sm bg-white/30 hover:bg-white/60 hover:border-transparent"
               >
                 <MdOutlineArrowBackIos className="text-white text-xl" />

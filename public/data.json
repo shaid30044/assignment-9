@@ -2,201 +2,265 @@
   {
     "id": 1,
     "name": "E3 Expo 2023",
-    "img": "e3.jpg",
+    "img": "https://i.ibb.co/BG76fqz/image-1-1-1.png",
     "description": "E3 Expo is the ultimate gaming event where industry giants unveil their latest games and hardware. Experience the future of gaming firsthand.",
     "price": 60,
     "place": "Los Angeles Convention Center, CA",
     "date": "2023-06-10",
-    "category": "Gaming"
+    "category": "Gaming",
+    "rating": 4.5
   },
   {
     "id": 2,
     "name": "CES 2023",
-    "img": "ces.jpg",
+    "img": "https://i.ibb.co/NmW23ph/f7bd59b0-8c74-11ed-bffd-72f4a9addcff-webp.jpg",
     "description": "CES is the global stage for innovation, featuring the latest in consumer technology, from smart devices to cutting-edge gadgets.",
     "price": 150,
     "place": "Las Vegas, NV",
     "date": "2023-01-05",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.0
   },
   {
     "id": 3,
     "name": "BlizzCon 2023",
-    "img": "blizzcon.jpg",
+    "img": "https://i.ibb.co/0CKZ0Hy/image-16.png",
     "description": "BlizzCon is Blizzard Entertainment's annual celebration of all things gaming, featuring announcements, tournaments, and cosplay.",
     "price": 75,
     "place": "Anaheim Convention Center, CA",
     "date": "2023-11-03",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 4.0
   },
   {
     "id": 4,
     "name": "GDC 2023",
-    "img": "gdc.jpg",
+    "img": "https://i.ibb.co/pyQKxbj/image-1-2.png",
     "description": "Game Developers Conference is where game industry professionals gather to exchange ideas, network, and learn from experts.",
     "price": 250,
     "place": "San Francisco, CA",
     "date": "2023-03-20",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.5
   },
   {
     "id": 5,
     "name": "PlayStation Experience 2023",
-    "img": "psx.jpg",
+    "img": "https://i.ibb.co/wg3gmnQ/image-31.png",
     "description": "PlayStation Experience is a must-attend event for PlayStation fans, with hands-on demos and exciting announcements.",
     "price": 50,
     "place": "New York City, NY",
     "date": "2023-09-15",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 4.5
   },
   {
     "id": 6,
     "name": "PAX West 2023",
-    "img": "pax.jpg",
+    "img": "https://i.ibb.co/LQwd56b/image-30.png",
     "description": "PAX West is the ultimate gaming festival, featuring panels, tournaments, and an expo hall filled with the latest games.",
     "price": 70,
     "place": "Seattle, WA",
     "date": "2023-08-31",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 4.0
   },
   {
     "id": 7,
     "name": "Apple WWDC 2023",
-    "img": "wwdc.jpg",
+    "img": "https://i.ibb.co/pQXyPv0/image-12.png",
     "description": "Apple's Worldwide Developers Conference showcases the latest in iOS, macOS, and other Apple technologies.",
     "price": 200,
     "place": "San Jose, CA",
     "date": "2023-06-05",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.5
   },
   {
     "id": 8,
     "name": "Hack the North 2023",
-    "img": "hackthenorth.jpg",
+    "img": "https://i.ibb.co/cvwhn7f/image-29.png",
     "description": "Hack the North is Canada's largest hackathon, bringing together innovators and creators to build amazing projects in a 36-hour coding marathon.",
     "price": 0,
     "place": "Waterloo, ON, Canada",
     "date": "2023-09-08",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "rating": 3.5
   },
   {
     "id": 9,
     "name": "Gamescom 2023",
-    "img": "gamescom.jpg",
+    "img": "https://i.ibb.co/hf2Cb8w/image-28.png",
     "description": "Gamescom is Europe's biggest gaming event, with game announcements, demos, and esports competitions.",
     "price": 80,
     "place": "Cologne, Germany",
     "date": "2023-08-23",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 4.0
   },
   {
     "id": 10,
     "name": "Google I/O 2023",
-    "img": "io.jpg",
+    "img": "https://i.ibb.co/K9z0w5G/image-10.png",
     "description": "Google I/O is a developer conference where Google unveils its latest innovations in software and hardware.",
     "price": 0,
     "place": "Mountain View, CA",
     "date": "2023-05-18",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.5
   },
   {
     "id": 11,
     "name": "Minecraft Live 2023",
-    "img": "minecraft.jpg",
+    "img": "https://i.ibb.co/FzJ9HTg/image-13.png",
     "description": "Minecraft Live is an annual event where fans can learn about upcoming updates and participate in community activities.",
     "price": 0,
     "place": "Online",
     "date": "2023-10-01",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 4.0
   },
   {
     "id": 12,
     "name": "TechCrunch Disrupt 2023",
-    "img": "techcrunch.jpg",
+    "img": "https://i.ibb.co/0YczTxk/image-27.png",
     "description": "TechCrunch Disrupt is a tech startup conference where innovative companies showcase their products and ideas.",
     "price": 120,
     "place": "San Francisco, CA",
     "date": "2023-09-25",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.5
   },
   {
     "id": 13,
     "name": "VRX 2023",
-    "img": "vrx.jpg",
+    "img": "https://i.ibb.co/nLdM0Pg/image-25.png",
     "description": "VRX is the leading virtual reality and augmented reality conference, featuring demos and discussions on VR technology.",
     "price": 90,
     "place": "Los Angeles, CA",
     "date": "2023-11-08",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.0
   },
   {
     "id": 14,
     "name": "Nvidia GeForce Showcase 2023",
-    "img": "geforce.jpg",
+    "img": "https://i.ibb.co/d7ZRkrV/image-14.png",
     "description": "Nvidia GeForce Showcase unveils the latest graphics technology for gaming and professional applications.",
     "price": 0,
     "place": "Online",
     "date": "2023-04-12",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.5
   },
   {
     "id": 15,
     "name": "QuakeCon 2023",
-    "img": "quakecon.jpg",
+    "img": "https://i.ibb.co/4S3FyMW/image-15-1.png",
     "description": "QuakeCon is a celebration of id Software's classic games, featuring tournaments and developer panels.",
     "price": 60,
     "place": "Dallas, TX",
     "date": "2023-08-10",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 4.0
   },
   {
     "id": 16,
     "name": "HackerX Tech Networking 2023",
-    "img": "hackerx.jpg",
+    "img": "https://i.ibb.co/4N7dKnP/image-22.png",
     "description": "HackerX Tech Networking is an exclusive event for tech professionals to network with top companies and discover job opportunities.",
     "price": 0,
     "place": "Various Locations",
     "date": "2023-07-28",
-    "category": "Tech Networking"
+    "category": "Tech Networking",
+    "rating": 3.5
   },
   {
     "id": 17,
     "name": "Global Game Jam 2023",
-    "img": "globalgamejam.jpg",
+    "img": "https://i.ibb.co/nDwgv5C/image-26.png",
     "description": "Global Game Jam is a worldwide hackathon for game developers to create unique games in just 48 hours.",
     "price": 0,
     "place": "Worldwide",
     "date": "2023-01-27",
-    "category": "Hackathon"
+    "category": "Hackathon",
+    "rating": 4.0
   },
   {
     "id": 18,
     "name": "Intel Developer Forum 2023",
-    "img": "idf.jpg",
+    "img": "https://i.ibb.co/vVHdMtj/image-17.png",
     "description": "Intel Developer Forum is a tech event where developers and enthusiasts explore Intel's latest innovations.",
     "price": 50,
     "place": "San Francisco, CA",
     "date": "2023-06-28",
-    "category": "Tech Conferences and Expos"
+    "category": "Tech Conferences and Expos",
+    "rating": 4.0
   },
   {
     "id": 19,
     "name": "Xbox FanFest 2023",
-    "img": "xbox.jpg",
+    "img": "https://i.ibb.co/XFbpg19/image-23.png",
     "description": "Xbox FanFest is the ultimate fan experience, with exclusive access to upcoming Xbox games and announcements.",
     "price": 40,
     "place": "Seattle, WA",
     "date": "2023-07-07",
-    "category": "Gaming Conventions"
+    "category": "Gaming Conventions",
+    "rating": 3.5
   },
   {
     "id": 20,
     "name": "Tech Startup Bootcamp 2023",
-    "img": "startupbootcamp.jpg",
+    "img": "https://i.ibb.co/wCWL7gf/image-19-1.png",
     "description": "Tech Startup Bootcamp is an intensive program for aspiring entrepreneurs to learn, network, and pitch their startup ideas.",
     "price": 80,
     "place": "New York City, NY",
     "date": "2023-04-03",
-    "category": "Tech Bootcamps"
+    "category": "Tech Bootcamps",
+    "rating": 4.5
+  },
+  {
+    "id": 21,
+    "name": "Robotics Expo 2023",
+    "img": "https://i.ibb.co/W01YdVB/image-21.png",
+    "description": "Robotics Expo 2023 is a showcase of cutting-edge robotic technologies and innovations from around the world.",
+    "price": 75,
+    "place": "San Francisco, CA",
+    "date": "2023-07-15",
+    "category": "Robotics and AI",
+    "rating": 4.0
+  },
+  {
+    "id": 22,
+    "name": "AI Summit 2023",
+    "img": "https://i.ibb.co/qRY9TPn/image-24.png",
+    "description": "AI Summit 2023 brings together AI experts and enthusiasts to explore the latest advancements and applications of artificial intelligence.",
+    "price": 100,
+    "place": "New York City, NY",
+    "date": "2023-10-20",
+    "category": "Robotics and AI",
+    "rating": 4.0
+  },
+  {
+    "id": 23,
+    "name": "Tech Innovators Hackathon 2023",
+    "img": "https://i.ibb.co/dBd6198/image-1.png",
+    "description": "Tech Innovators Hackathon 2023 challenges participants to develop innovative tech solutions in a 48-hour coding competition.",
+    "price": 0,
+    "place": "San Francisco, CA",
+    "date": "2023-05-06",
+    "category": "Hackathon",
+    "rating": 4.5
+  },
+  {
+    "id": 24,
+    "name": "AI in Healthcare Symposium 2023",
+    "img": "https://i.ibb.co/hKRFfNG/image-20.png",
+    "description": "AI in Healthcare Symposium 2023 explores the transformative role of artificial intelligence in the healthcare industry.",
+    "price": 50,
+    "place": "Chicago, IL",
+    "date": "2023-11-15",
+    "category": "Robotics and AI",
+    "rating": 4.5
   }
 ]
