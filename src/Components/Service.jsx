@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 const Service = ({ service }) => {
-  const { name, img, description, category, rating } = service;
+  const { id, name, img, description, category, rating } = service || {};
 
   return (
     <div className="">
@@ -34,7 +34,7 @@ const Service = ({ service }) => {
                   <BsStarFill />
                   <BsStarFill />
                   <BsStarFill />
-                  <BsStarFill />
+                  <BsStar />
                 </div>
               ) : (
                 <div className="flex gap-1">
@@ -48,7 +48,7 @@ const Service = ({ service }) => {
             </div>
             <p className="text-dark4">{rating}</p>
           </div>
-          <Link>
+          <Link to={`/details/${id}`}>
             <button className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-[16px] text-white px-6">
               View Details
             </button>
