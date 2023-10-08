@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "category": "Games",
+    "description": "Discover the exciting world of games. From video games to board games, explore gaming news, reviews, and insights. Stay up to date with the latest releases and connect with fellow gamers.",
+    "img": "https://i.ibb.co/yWDqbDd/image-3.png"
+  },
+  {
+    "id": 2,
+    "category": "Tech Conferences and Expos",
+    "description": "Immerse yourself in the ever-evolving world of technology through our comprehensive coverage of tech conferences and expos. Stay updated on the latest trends, connect with industry experts, and discover groundbreaking innovations in fields like AI, IoT, and cybersecurity.",
+    "img": "https://i.ibb.co/K7DqsxD/image-4.png"
+  },
+  {
+    "id": 3,
+    "category": "Gaming Conventions",
+    "description": "Dive into the exciting universe of gaming conventions. From video games to tabletop gaming, our platform provides highlights, cosplay showcases, and game previews. Stay informed about upcoming events and connect with fellow gamers to celebrate your passion.",
+    "img": "https://i.ibb.co/174Bt3Q/image-5.png"
+  },
+  {
+    "id": 4,
+    "category": "Hackathons",
+    "description": "Fuel your coding and problem-solving skills with our in-depth coverage of hackathons. Explore upcoming competitions, discover useful tools and resources, and learn from the success stories of talented developers and innovators.",
+    "img": "https://i.ibb.co/XtyhByF/image-6.png"
+  },
+  {
+    "id": 5,
+    "category": "Networking",
+    "description": "Networking is essential for personal and professional growth. Our platform offers insights into effective networking strategies, event recommendations, and tips to maximize your connections and opportunities in your industry.",
+    "img": "https://i.ibb.co/rZC8xRg/shutterstock-704922217-1122x800.jpg"
+  },
+  {
+    "id": 6,
+    "category": "Bootcamps",
+    "description": "Elevate your skills and knowledge with immersive bootcamp experiences. Find the best programs for career development and personal growth, and gain access to valuable resources and advice to accelerate your learning journey.",
+    "img": "https://i.ibb.co/qgrs3jD/image-8.png"
+  },
+  {
+    "id": 7,
+    "category": "Robotics and AI Expos",
+    "description": "Stay at the forefront of innovation with updates on robotics and AI events. Explore robotics competitions, AI conferences, and exhibitions showcasing the latest advancements in artificial intelligence and robotics technology.",
+    "img": "https://i.ibb.co/SmXw0rd/image-9.png"
+  }
+]

@@ -54,7 +54,7 @@ const Details = () => {
           <Navbar />
         </div>
       </div>
-      <div className="bg-dark7 px-4 md:px-10 lg:px-56 py-20 md:py-28 lg:py-40">
+      <div className="bg-dark7 text-justify px-4 md:px-10 lg:px-56 py-20 md:py-28 lg:py-40">
         <div className="bg-white rounded-3xl p-5 md:p-8 lg:p-10">
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
             <img

@@ -1,6 +1,7 @@
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import logo from "../assets/footer-logo.png";
+import { SiWelcometothejungle } from "react-icons/si";
 
 const About = () => {
   return (
@@ -11,14 +12,17 @@ const About = () => {
             <Navbar />
           </div>
         </div>
-        <div className="bg-dark7 px-4 md:px-10 lg:px-32 py-40">
-          <p className="text-lg font-medium text-dark2 pb-10">
-            Welcome to{" "}
-            <span className="text-xl font-semibold text-color1">XPO</span>{" "}
-            <span className="text-xl font-semibold text-color2">2023</span>{" "}
-            where events come to life!
-          </p>
-          <div className="grid grid-cols-2 justify-between items-center gap-6">
+        <div className="bg-dark7 text-justify px-4 md:px-10 lg:px-32 py-20 lg:py-40">
+          <div className="flex items-center text-lg font-medium text-dark2 pb-10">
+            <SiWelcometothejungle />
+            <p>
+              elcome to{" "}
+              <span className="text-xl font-semibold text-color1">XPO</span>{" "}
+              <span className="text-xl font-semibold text-color2">2023</span>{" "}
+              where events come to life!
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 justify-between items-center gap-6">
             <p className="text-lg font-medium text-dark2">
               <span className="text-xl font-semibold text-color1">XPO</span>{" "}
               <span className="text-xl font-semibold text-color2">2023</span>,
@@ -27,7 +31,7 @@ const About = () => {
               Gaming Conventions, Hackathons, Networking, Bootcamps, Robotics,
               and AI.
             </p>
-            <div className="flex justify-center items-center gap-4">
+            <div className="flex justify-center items-center gap-4 order-first md:order-last">
               <img className="h-24" src={logo} alt="" />
               <h1 className="text-5xl font-extrabold text-color1">
                 XPO <p className="text-color2">2023</p>

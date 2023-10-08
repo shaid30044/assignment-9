@@ -2,6 +2,7 @@ import Carousel from "../Components/Carousel";
 import Navbar from "../Components/Navbar";
 import Services from "../Components/Services";
 import Footer from "../Components/Footer";
+import EventsCorner from "../Components/EventsCorner";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       </div>
       <Carousel />
       <Services />
+      <EventsCorner />
       <Footer />
     </div>
   );
