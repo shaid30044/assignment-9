@@ -39,8 +39,8 @@ const Services = () => {
   };
 
   return (
-    <div className="px-4 md:px-10 lg:px-20 py-10 md:py-20">
-      <h1 className="text-3xl md:text-4xl font-bold text-center text-color1 pb-10">
+    <div className="bg-dark7 px-4 md:px-10 lg:px-20 py-10 md:py-20">
+      <h1 className="text-3xl md:text-5xl font-bold text-center text-color1 pb-10">
         Our Services
       </h1>
       <form onSubmit={handleSubmit} className="flex justify-center mb-10">
@@ -50,12 +50,12 @@ const Services = () => {
           type="search"
           name="search"
           placeholder="Search your Category here..."
-          className="rounded-l-full bg-white border-y-2 border-l-2 focus:border-color1 text-sm md:text-base font-medium text-color2 focus:outline-none w-60 md:w-[400px] px-4 py-2 md:px-6"
+          className="rounded-l-full bg-white border-y-2 border-l-2 border-transparent focus:border-color1 text-base font-medium text-color2 focus:outline-none w-60 md:w-[400px] lg:w-[500px] px-4 py-2 lg:py-2.5 md:px-6"
         />
         <button
           type="submit"
           disabled={isLoading}
-          className="bg-color1 hover:bg-color2 md:text-lg md:font-medium text-white rounded-r-full focus:outline-none px-2.5 md:px-3 lg:px-4 py-2"
+          className="bg-color1 hover:bg-color2 duration-300 text-lg lg:text-xl md:font-medium text-white rounded-r-full focus:outline-none px-5 lg:px-6 py-2"
         >
           {isLoading ? "Searching..." : "Search"}
         </button>

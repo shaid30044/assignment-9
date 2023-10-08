@@ -21,7 +21,7 @@ const Footer = () => {
           <div className="space-y-3.5">
             <p>
               <span className="text-dark4 hover:text-color1 font-medium hover:underline underline-offset-8 decoration-2 duration-300">
-                <Link to="/">Gaming</Link>
+                <Link to="/">Games</Link>
               </span>
             </p>
             <p>
@@ -41,12 +41,12 @@ const Footer = () => {
             </p>
             <p>
               <span className="text-dark4 hover:text-color1 font-medium hover:underline underline-offset-8 decoration-2 duration-300">
-                <Link to="/">Tech Networking</Link>
+                <Link to="/">Networking</Link>
               </span>
             </p>
             <p>
               <span className="text-dark4 hover:text-color1 font-medium hover:underline underline-offset-8 decoration-2 duration-300">
-                <Link to="/">Tech Bootcamps</Link>
+                <Link to="/">Bootcamps</Link>
               </span>
             </p>
             <p>

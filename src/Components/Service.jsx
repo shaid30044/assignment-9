@@ -11,19 +11,21 @@ const Service = ({ service }) => {
         src={img}
         alt=""
       />
-      <div className="border-x-2 border-b-2 border-dark6 rounded-b-xl p-5">
-        <p className="text-[10px] text-dark4">
-          <span className="bg-dark6 rounded-[5px] px-2 py-1">#{category}</span>
+      <div className="bg-white rounded-b-xl p-5">
+        <p className="text-xs font-medium text-dark4">
+          <span className="bg-dark7 rounded-[5px] px-2 py-1">#{category}</span>
         </p>
-        <h1 className="text-xl font-semibold text-dark2 pt-3">{name}</h1>
-        <p className="text-dark3 text-[15px] pt-2">
-          {description.length > 70
-            ? `${description.slice(0, 70)}...`
+        <h1 className="text-2xl md:text-xl lg:text-2xl font-bold text-dark2 pt-3">
+          {name}
+        </h1>
+        <p className="text-dark3 text-lg font-medium pt-2">
+          {description.length > 60
+            ? `${description.slice(0, 60)}...`
             : description}
         </p>
         <div className="flex justify-between items-center pt-6">
-          <div className="flex items-center gap-4">
-            <div className="text-star">
+          <div className="flex items-center gap-4 md:gap-2 lg:gap-4">
+            <div className="text-star text-lg md:text-base lg:text-lg">
               {rating === 3.5 ? (
                 <div className="flex gap-1">
                   <BsStarFill />
@@ -50,12 +52,12 @@ const Service = ({ service }) => {
                 </div>
               )}
             </div>
-            <p className="text-dark4">
+            <p className="text-lg md:text-base lg:text-lg font-medium text-dark4">
               {rating === 4 ? <span>{rating}.0</span> : <span>{rating}</span>}
             </p>
           </div>
           <Link to={`/details/${id}`}>
-            <button className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-[16px] text-white px-6">
+            <button className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-lg text-white px-6">
               View Details
             </button>
           </Link>

@@ -40,7 +40,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/cart"
+                    to="/gallery"
                     className={({ isActive, isPending }) =>
                       isPending
                         ? "pending"
@@ -49,7 +49,7 @@ const Navbar = () => {
                         : ""
                     }
                   >
-                    Cart
+                    Gallery
                   </NavLink>
                 </li>
               </ul>
@@ -80,7 +80,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/cart"
+              to="/gallery"
               className={({ isActive, isPending }) =>
                 isPending
                   ? "pending"
@@ -89,7 +89,21 @@ const Navbar = () => {
                   : ""
               }
             >
-              Cart
+              Gallery
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/about"
+              className={({ isActive, isPending }) =>
+                isPending
+                  ? "pending"
+                  : isActive
+                  ? "underline underline-offset-8 decoration-4 text-color1"
+                  : ""
+              }
+            >
+              About Us
             </NavLink>
           </li>
         </ul>

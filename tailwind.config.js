@@ -16,7 +16,7 @@ export default {
         white: "#ffffff",
       },
       fontFamily: {
-        poppins: ["Poppins", "sans-serif"],
+        garamond: ["EB Garamond", "serif"],
       },
     },
   },
