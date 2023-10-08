@@ -25,7 +25,7 @@
     "place": "Los Angeles Convention Center, CA",
     "date": "June 10, 2023",
     "duration": "3 days",
-    "category": "Gaming",
+    "category": "Games",
     "rating": 4.5
   },
   {
@@ -460,7 +460,7 @@
     "place": "Various Locations",
     "date": "July 28, 2023",
     "duration": "1 day",
-    "category": "Tech Networking",
+    "category": "Networking",
     "rating": 3.5
   },
   {
@@ -576,7 +576,7 @@
     "place": "New York City, NY",
     "date": "April 3, 2023",
     "duration": "2 days",
-    "category": "Tech Bootcamps",
+    "category": "Bootcamps",
     "rating": 4.5
   },
   {

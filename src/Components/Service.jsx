@@ -5,8 +5,12 @@ const Service = ({ service }) => {
   const { id, name, img, description, category, rating } = service || {};
 
   return (
-    <div className="">
-      <img className="rounded-t-xl w-full" src={img} alt="" />
+    <div>
+      <img
+        className="rounded-t-xl w-full md:h-[190px] lg:h-[244px]"
+        src={img}
+        alt=""
+      />
       <div className="border-x-2 border-b-2 border-dark6 rounded-b-xl p-5">
         <p className="text-[10px] text-dark4">
           <span className="bg-dark6 rounded-[5px] px-2 py-1">#{category}</span>
@@ -46,7 +50,9 @@ const Service = ({ service }) => {
                 </div>
               )}
             </div>
-            <p className="text-dark4">{rating}</p>
+            <p className="text-dark4">
+              {rating === 4 ? <span>{rating}.0</span> : <span>{rating}</span>}
+            </p>
           </div>
           <Link to={`/details/${id}`}>
             <button className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-[16px] text-white px-6">

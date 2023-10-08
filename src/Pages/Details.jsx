@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { HiLocationMarker, HiCalendar } from "react-icons/hi";
 import { MdGeneratingTokens, MdTimer } from "react-icons/md";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
@@ -39,6 +39,12 @@ const Details = () => {
     category,
     rating,
   } = selectedService || {};
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(-1);
+  };
 
   return (
     <div className="relative">
@@ -204,6 +210,12 @@ const Details = () => {
               </li>
             </ul>
           </div>
+          <button
+            onClick={handleNavigate}
+            className="btn btn-ghost normal-case flex rounded-lg bg-color1 hover:bg-color2 text-[16px] text-white px-6 mt-10 m-auto"
+          >
+            Go Back
+          </button>
         </div>
       </div>
     </div>
