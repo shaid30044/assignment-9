@@ -3,6 +3,7 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home";
 import Details from "../Pages/Details";
 import Gallery from "../Pages/Gallery";
+import About from "../Pages/About";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
         path: "/gallery",
         element: <Gallery />,
         loader: () => fetch("/data.json"),
+      },
+      {
+        path: "/about",
+        element: <About />,
       },
       {
         path: "/details/:id",

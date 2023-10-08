@@ -130,7 +130,7 @@ const Details = () => {
               </div>
             </div>
           </div>
-          <div className="text-dark3 leading-6 pt-10 lg:pt-6">
+          <div className="text-dark2 font-medium leading-6 pt-10 lg:pt-6">
             <p className="first-line:uppercase first-line:text-color2 first-line:tracking-widest first-letter:text-8xl first-letter:font-bold first-letter:text-color1 first-letter:mr-2 first-letter:float-left text-lg">
               {description}
             </p>
