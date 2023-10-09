@@ -11,6 +11,7 @@ const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [showUserInfo, setShowUserInfo] = useState(false);
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -21,9 +22,14 @@ const Navbar = () => {
   };
 
   const handleLogout = () => {
+    // Open the logout confirmation modal
+    setShowLogoutModal(true);
+  };
+
+  const confirmLogout = () => {
     logOut()
       .then(() => {
-        toast.success("Logout successful!", {
+        toast.success("Sign Out successful!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -31,9 +37,10 @@ const Navbar = () => {
           pauseOnHover: true,
           draggable: true,
         });
+        setShowLogoutModal(false);
       })
       .catch((error) => {
-        toast.error("Logout failed. Please try again.", {
+        toast.error("Sign Out failed. Please try again.", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -43,6 +50,10 @@ const Navbar = () => {
         });
         console.error(error);
       });
+  };
+
+  const cancelLogout = () => {
+    setShowLogoutModal(false);
   };
 
   return (
@@ -227,7 +238,7 @@ const Navbar = () => {
         ) : (
           <Link to="/signIn">
             <button className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2 duration-300">
-              Login{" "}
+              Sign In{" "}
               <span className="text-xl lg:text-2xl">
                 <BiLogInCircle />
               </span>
@@ -245,7 +256,7 @@ const Navbar = () => {
               onClick={handleLogout}
               className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2 duration-300 w-full mt-4"
             >
-              Logout
+              Sign Out
               <span className="text-xl lg:text-2xl">
                 <BiLogOutCircle />
               </span>
@@ -259,6 +270,29 @@ const Navbar = () => {
       <div className="absolute">
         <ToastContainer />
       </div>
+      {showLogoutModal && (
+        <div className="fixed inset-0 flex items-center justify-center h-[90vh] z-50">
+          <div className="bg-black/80 p-10 rounded-lg shadow-md">
+            <p className="text-xl font-medium text-white">
+              Are you sure you want to logout?
+            </p>
+            <div className="mt-10 flex justify-center gap-6">
+              <button
+                onClick={confirmLogout}
+                className="btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2 duration-300 w-32"
+              >
+                Sign Out
+              </button>
+              <button
+                onClick={cancelLogout}
+                className="btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color2 hover:bg-color1 duration-300 w-32"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
