@@ -1,7 +1,21 @@
 import { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const EventsCorner = () => {
   const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
   useEffect(() => {
     const handleFetch = async () => {
@@ -21,7 +35,10 @@ const EventsCorner = () => {
         {events.map((event, idx) => (
           <div key={idx}>
             {event.id % 2 ? (
-              <div className="lg:flex items-center bg-color3 rounded-2xl lg:w-3/4">
+              <div
+                data-aos="fade-down-right"
+                className="lg:flex items-center bg-color3 rounded-2xl lg:w-3/4"
+              >
                 <img
                   className="w-full lg:w-[500px] lg:h-full rounded-t-2xl lg:rounded-r-[0px] lg:rounded-l-2xl"
                   src={event.img}
@@ -37,7 +54,7 @@ const EventsCorner = () => {
                 </div>
               </div>
             ) : (
-              <div className="lg:flex justify-end">
+              <div data-aos="fade-down-left" className="lg:flex justify-end">
                 <div className="lg:flex flex-row-reverse items-center bg-color4 rounded-2xl lg:w-3/4">
                   <img
                     className="w-full lg:w-1/2 lg:h-full rounded-t-2xl  lg:rounded-l-[0px] lg:rounded-r-2xl"

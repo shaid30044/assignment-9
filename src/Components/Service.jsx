@@ -1,11 +1,25 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 const Service = ({ service }) => {
   const { id, name, img, description, category, rating } = service || {};
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+  }, []);
 
   return (
-    <div>
+    <div data-aos="zoom-in">
       <img
         className="rounded-t-xl w-full md:h-[190px] lg:h-[244px]"
         src={img}

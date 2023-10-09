@@ -1,25 +1,48 @@
 import { Link, NavLink } from "react-router-dom";
-import { BiLogInCircle } from "react-icons/bi";
+import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
-import {
-  MdKeyboardArrowDown,
-  MdKeyboardArrowUp,
-  MdKeyboardArrowLeft,
-  MdKeyboardArrowRight,
-} from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+import { ToastContainer, toast } from "react-toastify";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   const [menuOpen, setMenuOpen] = useState(false);
-  const [eventsOpen, setEventsOpen] = useState(false);
+  const [showUserInfo, setShowUserInfo] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
 
-  const toggleEvents = () => {
-    setEventsOpen(!eventsOpen);
+  const handleUserInfoClick = () => {
+    setShowUserInfo(!showUserInfo);
+  };
+
+  const handleLogout = () => {
+    logOut()
+      .then(() => {
+        toast.success("Logout successful!", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+      })
+      .catch((error) => {
+        toast.error("Logout failed. Please try again.", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+        });
+        console.error(error);
+      });
   };
 
   return (
@@ -51,7 +74,7 @@ const Navbar = () => {
                 </li>
                 <li>
                   <NavLink
-                    to="/dashboard"
+                    to="/profile"
                     className={({ isActive, isPending }) =>
                       isPending
                         ? "pending"
@@ -62,127 +85,6 @@ const Navbar = () => {
                   >
                     Profile
                   </NavLink>
-                </li>
-                <li>
-                  <div className="relative">
-                    {eventsOpen ? (
-                      <div>
-                        <button
-                          onClick={toggleEvents}
-                          className="flex items-center gap-1"
-                        >
-                          Events <MdKeyboardArrowLeft />
-                        </button>
-                        <ul className="absolute left-20 top-0 bg-black/80 rounded-xl space-y-4 w-52 px-6 py-6">
-                          <li>
-                            <NavLink
-                              to="/games"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Games
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/tech_conferences"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Tech Conferences and Expos
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/gaming_conventions"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Gaming Conventions
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/hackathon"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Hackathon
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/networking"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Networking
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/bootcamps"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Bootcamps
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink
-                              to="/robot&ai"
-                              className={({ isActive, isPending }) =>
-                                isPending
-                                  ? "pending"
-                                  : isActive
-                                  ? "underline underline-offset-8 decoration-4 text-color1"
-                                  : ""
-                              }
-                            >
-                              Robotics and AI
-                            </NavLink>
-                          </li>
-                        </ul>
-                      </div>
-                    ) : (
-                      <button
-                        onClick={toggleEvents}
-                        className="flex items-center gap-1"
-                      >
-                        Events <MdKeyboardArrowRight />
-                      </button>
-                    )}
-                  </div>
                 </li>
                 <li>
                   <NavLink
@@ -254,7 +156,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/dashboard"
+              to="/profile"
               className={({ isActive, isPending }) =>
                 isPending
                   ? "pending"
@@ -265,127 +167,6 @@ const Navbar = () => {
             >
               Profile
             </NavLink>
-          </li>
-          <li>
-            <div className="relative">
-              {eventsOpen ? (
-                <div>
-                  <button
-                    onClick={toggleEvents}
-                    className="flex items-center gap-1"
-                  >
-                    Events <MdKeyboardArrowUp />
-                  </button>
-                  <ul className="absolute bg-black/60 rounded-xl space-y-4 w-60 lg:w-64 px-6 py-6 mt-5 lg:mt-6">
-                    <li>
-                      <NavLink
-                        to="/games"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Games
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/tech_conferences"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Tech Conferences and Expos
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/gaming_conventions"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Gaming Conventions
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/hackathon"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Hackathon
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/networking"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Networking
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/bootcamps"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Bootcamps
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink
-                        to="/robot&ai"
-                        className={({ isActive, isPending }) =>
-                          isPending
-                            ? "pending"
-                            : isActive
-                            ? "underline underline-offset-8 decoration-4 text-color1"
-                            : ""
-                        }
-                      >
-                        Robotics and AI
-                      </NavLink>
-                    </li>
-                  </ul>
-                </div>
-              ) : (
-                <button
-                  onClick={toggleEvents}
-                  className="flex items-center gap-1"
-                >
-                  Events <MdKeyboardArrowDown />
-                </button>
-              )}
-            </div>
           </li>
           <li>
             <NavLink
@@ -431,17 +212,53 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <Link>
-        <button className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2">
-          Login{" "}
-          <span className="text-xl lg:text-2xl">
-            <BiLogInCircle />
-          </span>
-        </button>
-        <button className="md:hidden btn btn-ghost text-xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0">
-          <BiLogInCircle />
-        </button>
-      </Link>
+      <div className="relative">
+        {user ? (
+          <button
+            onClick={handleUserInfoClick}
+            className="cursor-pointer pt-2 md:pt-0"
+          >
+            <img
+              src={user.photoURL}
+              alt={`${user.displayName}'s profile`}
+              className="w-8 lg:w-10 h-8 lg:h-10 rounded-full"
+            />
+          </button>
+        ) : (
+          <Link to="/login">
+            <button className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2 duration-300">
+              Login{" "}
+              <span className="text-xl lg:text-2xl">
+                <BiLogInCircle />
+              </span>
+            </button>
+            <button className="md:hidden btn btn-ghost text-xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0">
+              <BiLogInCircle />
+            </button>
+          </Link>
+        )}
+        {showUserInfo && user && (
+          <div className="absolute top-12 md:top-[45px] lg:top-[62px] right-0 bg-black/60 rounded-xl flex flex-col items-start text-white p-6">
+            <span className="pb-2">{user.displayName}</span>
+            <span>{user.email}</span>
+            <button
+              onClick={handleLogout}
+              className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2 duration-300 w-full mt-4"
+            >
+              Logout
+              <span className="text-xl lg:text-2xl">
+                <BiLogOutCircle />
+              </span>
+            </button>
+            <button className="md:hidden btn btn-ghost text-xl text-white hover:text-color1 bg-transparent hover:bg-transparent px-0 py-0">
+              <BiLogOutCircle />
+            </button>
+          </div>
+        )}
+      </div>
+      <div className="absolute">
+        <ToastContainer />
+      </div>
     </div>
   );
 };
