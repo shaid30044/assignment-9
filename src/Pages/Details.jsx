@@ -1,14 +1,24 @@
 import { useLoaderData, useNavigate, useParams } from "react-router-dom";
 import { HiLocationMarker, HiCalendar } from "react-icons/hi";
 import { MdGeneratingTokens, MdTimer } from "react-icons/md";
-import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
+import {
+  BsBookmarks,
+  BsBookmarksFill,
+  BsStarFill,
+  BsStarHalf,
+  BsStar,
+} from "react-icons/bs";
 import { IoMdPricetags } from "react-icons/io";
 import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import { useState } from "react";
 
 const Details = () => {
   const service = useLoaderData();
   const { id } = useParams();
+
+  const [bookmark, setBookmark] = useState(false);
 
   const selectedService = service.find((item) => item.id == id);
 
@@ -41,6 +51,37 @@ const Details = () => {
     rating,
   } = selectedService || {};
 
+  const handleBookmark = () => {
+    setBookmark(true);
+
+    const bookmarks = [];
+    const bookmarkServices = JSON.parse(
+      localStorage.getItem("bookmark_services")
+    );
+
+    if (!bookmarkServices) {
+      bookmarks.push(selectedService);
+      localStorage.setItem("bookmark_services", JSON.stringify(bookmarks));
+      return toast.success("Donation successful!", {
+        autoClose: 3000,
+      });
+    } else {
+      const isExist = bookmarkServices.find((service) => service.id == id);
+
+      if (!isExist) {
+        bookmarks.push(...bookmarkServices, selectedService);
+        localStorage.setItem("bookmark_services", JSON.stringify(bookmarks));
+        return toast.success("Bookmark added successfully!", {
+          autoClose: 3000,
+        });
+      } else {
+        return toast.warning("You've already bookmark this service.", {
+          autoClose: 3000,
+        });
+      }
+    }
+  };
+
   const navigate = useNavigate();
 
   const handleNavigate = () => {
@@ -62,15 +103,24 @@ const Details = () => {
               src={img}
               alt=""
             />
-            <div>
+            <div className="w-full">
               <h1 className="text-2xl md:text-3xl font-semibold text-dark2">
                 {name}
               </h1>
-              <p className="text-xs font-medium text-dark4 pt-2 pb-6">
-                <span className="bg-dark7 rounded-[5px] px-2 py-1">
-                  #{category}
-                </span>
-              </p>
+              <div className="flex justify-between items-center pt-4 pb-6">
+                <p className="text-xs font-medium text-dark4">
+                  <span className="bg-dark7 rounded-[5px] px-2 py-1">
+                    #{category}
+                  </span>
+                </p>
+                <button onClick={handleBookmark}>
+                  {!bookmark ? (
+                    <BsBookmarks />
+                  ) : (
+                    <BsBookmarksFill className="text-color1" />
+                  )}
+                </button>
+              </div>
               <p className="flex items-center gap-2">
                 <HiLocationMarker className="text-xl md:text-2xl text-color1" />
                 <span className="text-dark3 text-lg font-medium">{place}</span>
@@ -218,6 +268,7 @@ const Details = () => {
           </button>
         </div>
       </div>
+      <ToastContainer />
       <Footer />
     </div>
   );

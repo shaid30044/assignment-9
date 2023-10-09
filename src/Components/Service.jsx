@@ -6,6 +6,7 @@ import { BsStarFill, BsStarHalf, BsStar } from "react-icons/bs";
 
 const Service = ({ service }) => {
   const { id, name, img, description, category, rating } = service || {};
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
