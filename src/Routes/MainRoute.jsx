@@ -8,11 +8,14 @@ import Profile from "../Pages/Profile";
 import Favorites from "../Pages/Favorites";
 import SignIn from "../Pages/SignIn";
 import SignUp from "../Pages/SignUp";
+import PrivateRoutes from "./PrivateRoutes";
+import Error from "../Pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -21,11 +24,19 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile />,
+        element: (
+          <PrivateRoutes>
+            <Profile />
+          </PrivateRoutes>
+        ),
       },
       {
         path: "/favorites",
-        element: <Favorites />,
+        element: (
+          <PrivateRoutes>
+            <Favorites />
+          </PrivateRoutes>
+        ),
         loader: () => fetch("/data.json"),
       },
       {
