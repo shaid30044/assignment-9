@@ -5,7 +5,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import Navbar from "../Components/Navbar";
 import { ToastContainer, toast } from "react-toastify";
 
-const Login = () => {
+const SignIn = () => {
   const { login } = useContext(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
@@ -24,7 +24,7 @@ const Login = () => {
           navigate(location?.state ? location.state : "/");
         }, 2000);
 
-        toast.success("Login successful!", {
+        toast.success("Sign In successful!", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -37,7 +37,7 @@ const Login = () => {
         console.log(res.user);
       })
       .catch((error) => {
-        toast.error("Login failed. Please check your credentials.", {
+        toast.error("Sign In failed. Please check your credentials.", {
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -61,7 +61,7 @@ const Login = () => {
       <div className="flex flex-col justify-center items-center h-[100vh]">
         <div className="bg-dark7/70 rounded-2xl p-12 md:p-16">
           <h2 className="text-4xl font-semibold text-color1 text-center pb-10">
-            Login
+            Sign In
           </h2>
           <form onSubmit={handleLogin} className="flex flex-col gap-6 pb-10">
             <input
@@ -106,9 +106,9 @@ const Login = () => {
             Don&apos;t have an account?{" "}
             <Link
               className="underline underline-offset-2 text-color1 hover:text-color2 duration-300"
-              to="/registration"
+              to="/signUp"
             >
-              Registration now
+              Sign Up
             </Link>
           </p>
         </div>
@@ -118,4 +118,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignIn;

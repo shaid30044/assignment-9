@@ -6,8 +6,8 @@ import Gallery from "../Pages/Gallery";
 import About from "../Pages/About";
 import Profile from "../Pages/Profile";
 import Favorites from "../Pages/Favorites";
-import Login from "../Pages/Login";
-import Registration from "../Pages/Registration";
+import SignIn from "../Pages/SignIn";
+import SignUp from "../Pages/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -43,12 +43,12 @@ const router = createBrowserRouter([
         loader: () => fetch("/data.json"),
       },
       {
-        path: "/login",
-        element: <Login />,
+        path: "/signIn",
+        element: <SignIn />,
       },
       {
-        path: "/Registration",
-        element: <Registration />,
+        path: "/signUp",
+        element: <SignUp />,
       },
     ],
   },

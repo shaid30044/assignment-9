@@ -225,7 +225,7 @@ const Navbar = () => {
             />
           </button>
         ) : (
-          <Link to="/login">
+          <Link to="/signIn">
             <button className="hidden md:flex items-center btn btn-ghost normal-case rounded-lg lg:text-lg text-white bg-color1 hover:bg-color2 duration-300">
               Login{" "}
               <span className="text-xl lg:text-2xl">
@@ -238,7 +238,7 @@ const Navbar = () => {
           </Link>
         )}
         {showUserInfo && user && (
-          <div className="absolute top-12 md:top-[45px] lg:top-[62px] right-0 bg-black/60 rounded-xl flex flex-col items-start text-white p-6">
+          <div className="absolute top-12 md:top-[45px] lg:top-[62px] right-0 bg-black/60 rounded-xl flex flex-col items-start text-white w-48 p-6">
             <span className="pb-2">{user.displayName}</span>
             <span>{user.email}</span>
             <button

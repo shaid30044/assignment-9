@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar";
 import Services from "../Components/Services";
 import Footer from "../Components/Footer";
 import EventsCorner from "../Components/EventsCorner";
+import Upcoming from "../Components/Upcoming";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Carousel />
       <Services />
       <EventsCorner />
+      <Upcoming />
       <Footer />
     </div>
   );

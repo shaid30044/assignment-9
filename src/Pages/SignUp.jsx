@@ -4,11 +4,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { updateProfile } from "firebase/auth";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
+import { BsGoogle, BsDashLg } from "react-icons/bs";
 import Navbar from "../Components/Navbar";
 import { AuthContext } from "../Providers/AuthProvider";
 
-const Registration = () => {
-  const { createUser } = useContext(AuthContext);
+const SignUp = () => {
+  const { createUser, googleLogin } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const [showPassword, setShowPassword] = useState(false);
@@ -49,7 +50,7 @@ const Registration = () => {
         photoURL: photo,
       });
 
-      toast.success("Registration successfully!");
+      toast.success("Sign Up successfully!");
 
       setTimeout(() => {
         navigate("/");
@@ -60,6 +61,23 @@ const Registration = () => {
     }
   };
 
+  const handleGoogleLogin = () => {
+    googleLogin()
+      .then((res) => {
+        toast.success("Sign Up successfully!");
+
+        setTimeout(() => {
+          navigate("/");
+        }, 2000);
+        console.log(res.user);
+      })
+      .catch((error) => {
+        setRegisterError(error.message);
+        toast.error(error.message);
+        console.error("Google login error:", error);
+      });
+  };
+
   return (
     <div className="relative">
       <div className="sticky top-0 z-10">
@@ -67,10 +85,10 @@ const Registration = () => {
           <Navbar />
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center h-[100vh]">
+      <div className="flex flex-col justify-center items-center h-[vh] pt-20 md:pt-24 lg:pt-40 pb-10 lg:pb-20">
         <div className="bg-dark7/70 rounded-2xl p-12 md:p-16">
           <h2 className="text-3xl font-semibold text-color1 text-center pb-10">
-            Registration
+            Sign Up
           </h2>
           <form onSubmit={handleRegister} className="flex flex-col gap-6 pb-10">
             <input
@@ -140,13 +158,33 @@ const Registration = () => {
               <p className="text-lg text-red-600">{registerError}</p>
             )}
           </div>
+          <div>
+            <p className="flex justify-center items-center gap-4 text-lg font-medium text-dark3 text-center -mt-4">
+              <span className="text-3xl">
+                <BsDashLg />
+              </span>
+              Or
+              <span className="text-3xl">
+                <BsDashLg />
+              </span>
+            </p>
+            <button
+              onClick={handleGoogleLogin}
+              className="flex btn btn-ghost normal-case text-lg bg-color1 hover:bg-color2 text-white duration-300 my-6 w-full"
+            >
+              <span className="text-xl">
+                <BsGoogle />
+              </span>
+              Sign Up with Google
+            </button>
+          </div>
           <p className="text-center text-lg font-medium">
             Already have an account?{" "}
             <Link
               className="underline underline-offset-2 text-color1 hover:text-color2 duration-300"
-              to="/login"
+              to="/signIn"
             >
-              Login
+              Sign In
             </Link>
           </p>
         </div>
@@ -156,4 +194,4 @@ const Registration = () => {
   );
 };
 
-export default Registration;
+export default SignUp;
